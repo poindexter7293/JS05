@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		//주제 : 함수를 정의(함수를 만들고) 호출해서 사용하는 연습
+		
+		//1. 매개변수로 두개의 인수를 전달 받아 합을 구해 반환하는 add함수 정의
+		function add(a, b){
+			
+			//의미 a + b 의 계산결과값을 add함수를 호출한 줄의 코드로 되돌려준다.(반환한다.)
+			//return 반환할 값;
+			return a + b;
+		//  return 3 + 5;
+		//  return  8;
+		}
+		
+		//1.1. 위 정의 해 놓은 add라는 이름의 함수를 호출해서 사용
+		//문법
+		//함수명(인수1, 인수2);
+		console.log( add(3, 5) );
+		//해석 : add라는 이름의 함수를 호출할때  인수 3과 5를 전달해 계산된 결과값 8을 반환받아 console.log로 출력
+		
+		
+		//2. 두 a, b 매개변수로 두개의 인수를 전달 받아  두 값 중 큰 값을 반환하는 max함수 정의
+		function max(a, b){	
+			
+			if(a > b){
+				return a;
+			}else{
+				return b;
+			}
+			
+		}
+		//-----
+		//max라는 이름의 함수를 호출할때  a매개변수에 7을 전달하고, b매개변수에는 10을 전달해
+		//둘 중 큰값 10을 반환받아 console.log로 출력
+		//함수 호출 
+		console.log( max(7, 10) );
+	
+		//3. 하나의 매개변수로 한개의 숫자를 전달 받아 
+		//   양수이면 true 반환, 음수이면 false를 반환하는 기능의 isPositive함수 정의
+		function isPositive(num){
+			
+			if(num > 0){//양수면				
+				return true;		
+			}else{//음수			
+				return false;
+			}	
+		}
+		//-----------------------------------------------------------------------
+		//  isPositive 함수를 호출 할때 5를 전달해서 true를 반환받고 console.log로 출력
+		console.log(isPositive(5));//true
+		
+		//  isPositive 함수를 호출 할때 -2를 전달해서 false를 반환받고 console.log로 출력
+		let result = isPositive(-2);
+		console.log(result);//false
+		
+		//4. 하나의 매개변수로 한개의 숫자를 전달받아
+		//전달받은 숫자가 짝수이면? true반환하고
+		//전달받은 숫자가 홀수이면? false반환하는 기능의 isEven 함수 정의
+		function isEven(num){
+			
+			return num % 2 === 0;
+		}
+								
+		// isEven이라는 이름의 함수를 호출 할때  매개변수로 4를 전달하여  true반환 받아 console.log로 출력
+		console.log( isEven(4) );
+		// isEven이라는 이름의 함수를 호출 할때  매개변수로 7을 전달하여  false반환 받아 console.log로 출력
+		console.log( isEven(7) );		
+		
+		//5. 숫자 1부터 하나의 매개변수n으로 전달받은 인수의 합을 구해 반환하는 기능의 sumUpTo 함수 정의
+		function sumUpTo(n){
+			
+			//1부터 n매개변수로 전달받은 5까지의 합을 구해서 저장할 sum변수 선언 후 0으로 초기화
+			let sum = 0;
+			
+			//숫자 1부터 하나의 매개변수n으로 전달받은 인수의 합을 구해
+			for(let i=1;  i<=n;   i++){
+					    //i<=5; 
+					    
+				sum = sum + i;	//sum += i;    
+			}			
+			return sum;//15			
+		}
+			
+		// sumUpTo 라는 이름의 함수를 호출 할때  5를 매개변수n으로 전달하면  
+		// 15(1+2+3+4+5)를 구해 반환 받아 console.log로 출력
+		console.log(sumUpTo(5));
+		
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

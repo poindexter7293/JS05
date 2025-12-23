@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//사용자의 나이(age), 성별(isMale), VIP 여부(isVip)를 매개변수로 받아
+//영화 관란 가능 여부를 판단하는 function 키워드로 함수를 작성하시오
+//함수명 : canWatchMovie
+//1. VIP일시 나이 제한 없이 관람 가능
+//2. 나이가 18세 미만이면 관람 불가
+//3. 남성은 20세 이상이어야 관람 가능
+//4. 모든 조건 만족시 "영화 관람 가능"
+//5. 조건 불만족시 "영화 관람 불가능"
+
+function canWatchMovie(age, isMale, isVip) {
+if (isVip === true) {return "영화 관람 가능";}
+else{if (isMale===true && age >= 20) {return "영화 관람 가능";}
+else{if (isMale===false && age >18) {return "영화 관람 가능";}
+else{return"영화 관람 불가능";}}}}
+
+console.log(canWatchMovie(20, true, false));
+console.log(canWatchMovie(5, true, true));
+console.log(canWatchMovie(19, true, false));
+console.log(canWatchMovie(19, false, false));
+console.log(canWatchMovie(13, true, false));
+	
+	</script>
+</body>
+</html>

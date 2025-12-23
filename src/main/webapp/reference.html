@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+let a = 10; //전역변수 a
+const b = 20; //전역상수 b
+
+function sum() {
+	let a = 50; //지역변수 a
+	const b = 70; //지역상수 b
+	
+	console.log(`함수 내부 a 변수값 출력 : ${a}`);
+	console.log(`함수 내부 b 변수값 출력 : ${b}`);
+}
+
+	sum();
+	console.log(`함수 외부 a 변수값 출력 : ${a}`);
+	console.log(`함수 외부 b 변수값 출력 : ${b}`);
+
+</script>
+</body>
+</html>
